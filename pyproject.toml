@@ -33,9 +33,9 @@ dependencies = [
 dev = ["pytest", "ruff"]
 
 [project.urls]
-Homepage = "https://github.com/anmol/podpilot"
-Documentation = "https://github.com/anmol/podpilot#readme"
-Issues = "https://github.com/anmol/podpilot/issues"
+Homepage = "https://github.com/anmolduainter/PodPilot"
+Documentation = "https://github.com/anmolduainter/PodPilot#readme"
+Issues = "https://github.com/anmolduainter/PodPilot/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

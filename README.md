@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><img src="https://img.shields.io/badge/python-3.10+-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/></a>
-  <a href="#-installation"><img src="https://img.shields.io/badge/pip_install-podpilot-00d2ff?style=for-the-badge" alt="pip install"/></a>
-  <a href="#-features"><img src="https://img.shields.io/badge/RunPod-SDK-7b2ff7?style=for-the-badge" alt="RunPod"/></a>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/python-3.10+-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/></a>
+  <a href="#installation"><img src="https://img.shields.io/badge/clone_&_go-00d2ff?style=for-the-badge&logo=github&logoColor=white" alt="Clone & Go"/></a>
+  <a href="#features"><img src="https://img.shields.io/badge/RunPod-SDK-7b2ff7?style=for-the-badge" alt="RunPod"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"/></a>
 </p>
 
@@ -21,7 +21,7 @@
 **Stop babysitting GPUs.** PodPilot wraps the RunPod API into a single intelligent interface that discovers the best GPU for your workload, launches pods with automatic retry and live progress, provisions network volumes in the optimal data center, and tracks your spend — all with rich, color-coded terminal output.
 
 ```python
-from runpod_manager import RunPodManager
+from podpilot import RunPodManager
 
 mgr = RunPodManager()  # reads RUNPOD_API_KEY from env
 
@@ -205,10 +205,10 @@ Every command produces clean, readable output using [Rich](https://github.com/Te
 ## Installation
 
 ```bash
-pip install runpod-manager
+git clone https://github.com/anmolduainter/PodPilot.git
+cd PodPilot
+pip install -r requirements.txt
 ```
-
-**Requirements:** Python 3.10+ &nbsp;|&nbsp; Dependencies: `runpod`, `requests`, `rich`
 
 **Set your API key:**
 
@@ -227,7 +227,7 @@ mgr = RunPodManager(api_key="your-key-here")
 ## Quick Start
 
 ```python
-from runpod_manager import RunPodManager, SortBy
+from podpilot import RunPodManager, SortBy
 
 mgr = RunPodManager()
 
@@ -309,7 +309,7 @@ Main entry point. Reads `RUNPOD_API_KEY` from environment if not provided.
 ## Architecture
 
 ```
-runpod_manager/
+podpilot/
 ├── manager.py      # RunPodManager — top-level orchestrator
 ├── gpu.py          # GPUManager — discovery, filtering, composite scoring
 ├── pods.py         # PodManager — lifecycle, live progress, retry
